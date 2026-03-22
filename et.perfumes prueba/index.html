@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ET.PERFUMES - Tienda de Perfumes Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>✨ ET.PERFUMES ✨</h1>
+                <p class="tagline">Perfumes Premium Importados</p>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-bar" placeholder="Buscar perfume...">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- Shopping Cart Icon -->
+            <div class="cart-icon-container">
+                <i class="fas fa-shopping-cart cart-icon" id="cartIcon"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+
+            <!-- Hamburger Menu -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="nav-menu" id="navMenu">
+            <a href="#home" class="nav-link">Inicio</a>
+            <a href="#perfumes" class="nav-link">Perfumes</a>
+            <a href="#ofertas" class="nav-link">Top Ventas</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Descubre Nuestros Perfumes Premium</h2>
+            <p>Fragancias exclusivas con los mejores precios del mercado</p>
+            <button class="cta-button" onclick="document.getElementById('perfumes').scrollIntoView({behavior: 'smooth'})">
+                Ver Catálogo
+            </button>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="perfumes">
+        <div class="container">
+            <h2 class="section-title">Nuestros Perfumes</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="top-ventas">🔥 Top Ventas</button>
+                <button class="filter-btn" data-filter="segunda-linea">📈 Segunda Línea</button>
+                <button class="filter-btn" data-filter="dulces">🧁 Dulces</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Los productos se cargarán aquí con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-content">
+            <div class="cart-header">
+                <h2>🛒 Carrito de Compras</h2>
+                <button class="close-cart" id="closeCart">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Los items del carrito se mostrarán aquí -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Total: $<span id="totalPrice">0</span></strong>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn">💬 Pedir por WhatsApp</button>
+                <button class="continue-shopping-btn" id="continueShoppingBtn">Seguir Comprando</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/543436222159?text=Hola%20ET.PERFUMES%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20perfumes" 
+       class="whatsapp-btn" target="_blank" title="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contacto">
+        <div class="container">
+            <h2 class="section-title">📞 Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>¿Preguntas o Consultas?</h3>
+                    <p><strong>📱 WhatsApp:</strong> <a href="https://wa.me/543436222159">+54 343 622 2159</a></p>
+                    <p><strong>💬 Horario:</strong> Lunes a Viernes 9:00 - 18:00</p>
+                    <p><strong>📦 Envíos:</strong> A todo el país</p>
+                    <p><strong>💳 Métodos de Pago:</strong> Transferencia, Efectivo</p>
+                </div>
+                <div class="contact-info">
+                    <h3>¿Por qué elegirnos?</h3>
+                    <p>✅ Perfumes 100% originales</p>
+                    <p>✅ Mejores precios del mercado</p>
+                    <p>✅ Entrega rápida</p>
+                    <p>✅ Asesoramiento personalizado</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 ET.PERFUMES - Todos los derechos reservados. | Venta de Perfumes Premium</p>
+            <div class="footer-links">
+                <a href="https://wa.me/543436222159">WhatsApp</a>
+                <a href="#privacidad">Política de Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
